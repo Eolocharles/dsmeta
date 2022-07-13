@@ -3,8 +3,14 @@ package com.devsuperior.dsmeta.services;
 import com.devsuperior.dsmeta.entities.Sale;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.List;
 
 @Service
@@ -13,7 +19,13 @@ public class SaleService {
     @Autowired
     private SaleRepository repository;
 
-    public List<Sale> findSales(){
-        return repository.findAll();
+    public Page<Sale> findSales(String mimDate, String maxDate, Pageable pageable) {
+
+        LocalDate today = LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
+
+        LocalDate min = mimDate.equals("") ? today.minusDays(365) : LocalDate.parse(mimDate);
+        LocalDate max = maxDate.equals("") ? today : LocalDate.parse(maxDate);
+
+        return repository.findSales(min, max, pageable);
     }
 }

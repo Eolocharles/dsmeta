@@ -9,69 +9,24 @@ dsmeta é uma aplicação full stack web e mobile construída durante  **Semana 
 
 A aplicação consiste em um sistema de pesquisa de vendas, onde podemos buscar as vendas por data, e enviar um sms notificando o vendedor.
 
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
-
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
-
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
-
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+## Layout 
+![Mobile 1](https://github.com/Eolocharles/dsmeta/blob/main/assets/layout.png)
 
 # Tecnologias utilizadas
 ## Back end
+- API REST
 - Java
 - Spring Boot
-- JPA / Hibernate
-- Maven
 ## Front end
 - HTML / CSS / JS / TypeScript
 - ReactJS
-- React Native
-- Apex Charts
-- Expo
 ## Implantação em produção
 - Back end: Heroku
 - Front end web: Netlify
 - Banco de dados: H2
 
-# Como executar o projeto
-
-## Back end
-Pré-requisitos: Java 11
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto back end
-cd backend
-
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn dev
-```
-
 # Autor
 
 Éolo Charles da Silva
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/eolocharles
